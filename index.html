@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paróquia Santíssima Trindade</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --azul-escuro: #2b3a67; /* O azul da sua logo */
+            --dourado: #d4af37;     /* O dourado da sua logo */
+            --bege-claro: #f4e4bc;  /* Fundo suave para contraste */
+            --branco: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, sans-serif;
+            margin: 0;
+            background-color: var(--branco);
+            color: var(--azul-escuro);
+            padding-bottom: 80px;
+        }
+
+        /* Topo com Logo Centralizada */
+        header {
+            background-color: var(--branco);
+            padding: 30px 10px;
+            text-align: center;
+            border-bottom: 3px solid var(--dourado);
+        }
+
+        header img {
+            max-width: 250px; /* Aqui você vai linkar sua imagem */
+            height: auto;
+        }
+
+        /* Banner de Destaque */
+        .banner-liturgia {
+            background-color: var(--azul-escuro);
+            color: var(--bege-claro);
+            padding: 20px;
+            margin: 15px;
+            border-radius: 15px;
+            text-align: center;
+            border-left: 5px solid var(--dourado);
+        }
+
+        /* Menu de Grade (Dashboard) */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            padding: 15px;
+        }
+
+        .menu-item {
+            background-color: var(--branco);
+            border: 2px solid var(--azul-escuro);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .menu-item i {
+            font-size: 28px;
+            color: var(--dourado);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .menu-item span {
+            color: var(--azul-escuro);
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .menu-item:active {
+            background-color: var(--bege-claro);
+        }
+
+        /* Botão de Dízimo em Destaque */
+        .btn-dizimo {
+            background-color: var(--dourado);
+            color: var(--azul-escuro);
+            margin: 15px;
+            padding: 18px;
+            border-radius: 12px;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Barra Inferior */
+        .nav-bottom {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: var(--azul-escuro);
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 0;
+        }
+
+        .nav-bottom i {
+            color: var(--bege-claro);
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="logocolorida.png" alt="Paróquia Santíssima Trindade">
+    </header>
+
+    <div class="banner-liturgia">
+        <small>LITURGIA DE HOJE</small>
+        <p style="margin: 5px 0; font-style: italic;">"Glória ao Pai, ao Filho e ao Espírito Santo."</p>
+    </div>
+
+    <div class="menu-grid">
+        <a href="#" class="menu-item">
+            <i class="fas fa-church"></i>
+            <span>MISSAS</span>
+        </a>
+        <a href="#" class="menu-item">
+            <i class="fas fa-calendar-alt"></i>
+            <span>EVENTOS</span>
+        </a>
+        <a href="#" class="menu-item">
+            <i class="fas fa-book-open"></i>
+            <span>AVISOS</span>
+        </a>
+        <a href="#" class="menu-item">
+            <i class="fab fa-whatsapp"></i>
+            <span>SECRETARIA</span>
+        </a>
+    </div>
+
+    <a href="#" class="btn-dizimo">
+        <i class="fas fa-hand-holding-heart"></i> DÍZIMO DIGITAL
+    </a>
+
+    <nav class="nav-bottom">
+        <i class="fas fa-home"></i>
+        <i class="fas fa-pray"></i>
+        <i class="fas fa-map-marker-alt"></i>
+        <i class="fas fa-cog"></i>
+    </nav>
+
+</body>
+</html>

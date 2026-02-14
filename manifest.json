@@ -1,0 +1,21 @@
+{
+  "short_name": "Paróquia",
+  "name": "Paróquia Santíssima Trindade",
+  "icons": [
+    {
+      "src": "icone-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icone-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "index.html",
+  "background_color": "#FFFFFF",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#1A237E"
+}
