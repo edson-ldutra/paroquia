@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Paróquia Santíssima Trindade</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -18,7 +18,9 @@
             margin: 0;
             background-color: var(--branco);
             color: var(--azul-escuro);
-            padding-bottom: 80px;
+            /* O padding-bottom agora considera a altura do menu + a área dos botões do celular */
+            padding-bottom: calc(90px + env(safe-area-inset-bottom));
+            overflow-x: hidden;
         }
 
         /* Topo com Logo Centralizada */
@@ -30,7 +32,7 @@
         }
 
         header img {
-            max-width: 250px; /* Aqui você vai linkar sua imagem */
+            max-width: 250px;
             height: auto;
         }
 
@@ -95,20 +97,36 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
-        /* Barra Inferior */
+        /* BARRA INFERIOR CORRIGIDA */
         .nav-bottom {
             position: fixed;
             bottom: 0;
+            left: 0;
+            right: 0;
             width: 100%;
             background-color: var(--azul-escuro);
             display: flex;
             justify-content: space-around;
-            padding: 15px 0;
+            align-items: center;
+            
+            /* Padding superior fixo */
+            padding-top: 15px;
+            
+            /* Padding inferior dinâmico: 15px + o tamanho da barra de botões do Android */
+            padding-bottom: calc(15px + env(safe-area-inset-bottom));
+            
+            z-index: 1000;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
         }
 
         .nav-bottom i {
             color: var(--bege-claro);
-            font-size: 20px;
+            font-size: 22px;
+            padding: 5px 15px;
+        }
+
+        .nav-bottom i:active {
+            color: var(--dourado);
         }
     </style>
 </head>
